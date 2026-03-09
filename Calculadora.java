@@ -12,6 +12,10 @@ public class Calculadora {
                 return suma();
             case "-":
                 return resta();
+            case "*":
+                return multiplicacion();
+            case "/":
+                return division();
             default:
                 throw new IllegalArgumentException("Operación no válida.");
         }
@@ -24,4 +28,15 @@ public class Calculadora {
     private int resta() {
         return numero1 - numero2;
     }   
+
+    private int multiplicacion() {
+        return numero1 * numero2;
+    }
+
+    private int division() {
+        if (numero2 == 0) {
+            throw new ArithmeticException("No se puede dividir por cero.");
+        }
+        return numero1 / numero2;
+    }
 }
