@@ -7,4 +7,9 @@ public class TestCalculadora {
         Calculadora calculadora = new Calculadora(5, 3);
         assertEquals(8, calculadora.realizarOperacion("+"), 0);
     }
+    @Test
+    public void testMultiplicacion() {
+        Calculadora calculadora = new Calculadora(5, 3);
+        assertEquals(15, calculadora.realizarOperacion("*"), 0);
+    }
 }

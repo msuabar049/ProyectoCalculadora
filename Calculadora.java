@@ -10,6 +10,8 @@ public class Calculadora {
         switch (operacion) {
             case "+":
                 return suma();
+            case "*":
+                return multiplicacion();
             default:
                 throw new IllegalArgumentException("Operación no válida.");
         }
@@ -17,5 +19,9 @@ public class Calculadora {
 
     private int suma() {
         return numero1 + numero2;
+    }
+
+    private int multiplicacion() {
+        return numero1 * numero2;
     }
 }
