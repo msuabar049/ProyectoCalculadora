@@ -10,6 +10,8 @@ public class Calculadora {
         switch (operacion) {
             case "+":
                 return suma();
+            case "-":
+                return resta();
             case "*":
                 return multiplicacion();
             case "/":
@@ -22,6 +24,10 @@ public class Calculadora {
     private int suma() {
         return numero1 + numero2;
     }
+    
+    private int resta() {
+        return numero1 - numero2;
+    }   
 
     private int multiplicacion() {
         return numero1 * numero2;
