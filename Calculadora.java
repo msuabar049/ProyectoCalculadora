@@ -10,6 +10,10 @@ public class Calculadora {
         switch (operacion) {
             case "+":
                 return suma();
+            case "*":
+                return multiplicacion();
+            case "/":
+                return division();
             default:
                 throw new IllegalArgumentException("Operación no válida.");
         }
@@ -17,5 +21,16 @@ public class Calculadora {
 
     private int suma() {
         return numero1 + numero2;
+    }
+
+    private int multiplicacion() {
+        return numero1 * numero2;
+    }
+
+    private int division() {
+        if (numero2 == 0) {
+            throw new ArithmeticException("No se puede dividir por cero.");
+        }
+        return numero1 / numero2;
     }
 }
