@@ -12,4 +12,9 @@ public class TestCalculadora {
         Calculadora calculadora = new Calculadora(5, 3);
         assertEquals(15, calculadora.realizarOperacion("*"), 0);
     }
+    @Test
+    public void testDivision() {
+        Calculadora calculadora = new Calculadora(10, 2);
+        assertEquals(5, calculadora.realizarOperacion("/"), 0);
+    }
 }
